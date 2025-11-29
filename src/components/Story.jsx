@@ -17,13 +17,6 @@ const Story = () => {
             alt: "Getting to Know"
         },
         {
-            date: "January 21, 2024 💙",
-            title: "First Meeting",
-            text: "Jamuna Future Park, Domino's. You wore blue again - it was becoming \"our color.\" Both of us were nervous, hearts racing, palms sweaty, but it felt so right. On the way back, I rested on your shoulder and took a quick nap. You let me hold your hand. That moment... I knew. I just knew you were the one.",
-            image: "/photo3.jpg",
-            alt: "First Meeting"
-        },
-        {
             date: "January 16, 2024 • 4:10 AM 💍",
             title: "The Question",
             text: "I was about to propose. I looked into your eyes... and got completely lost. I was so nervous, my heart was pounding like crazy. But I gathered all my courage and asked you to be mine. The scariest and most beautiful moment of my life.",
@@ -31,19 +24,26 @@ const Story = () => {
             alt: "The Question"
         },
         {
+            date: "January 21, 2024 💙",
+            title: "First Meeting",
+            text: "Jamuna Future Park, Domino's. You wore blue again - it was becoming \"our color.\" Both of us were nervous, hearts racing, palms sweaty, but it felt so right. On the way back, I rested on your shoulder and took a quick nap. You let me hold your hand. That moment... I knew. I just knew you were the one.",
+            image: "/photo3.jpg",
+            alt: "First Meeting"
+        },
+        {
+            date: "January 22, 2024 🛍️",
+            title: "Bashundhara Shopping Mall",
+            text: "Our second meeting. The nervousness was gone, replaced by pure joy and excitement. Just being around you felt like home.",
+            image: "/story_new_2.png",
+            alt: "Bashundhara Shopping Mall",
+            imagePosition: "object-center"
+        },
+        {
             date: "January 29, 2024 • 2:53 AM ❤️",
             title: "She Said Yes",
             text: "You said YES! At 2:53 in the morning, you made me the happiest person alive. That single word changed everything. This is when \"us\" officially began. This is when our forever started. And I've been grateful for every single moment since then.",
             image: null,
             alt: "She Said Yes"
-        },
-        {
-            date: "February 2024 🍔",
-            title: "Our 2nd Visit",
-            text: "Meeting you for the second time. The nervousness was gone, replaced by pure joy and excitement. Just being around you felt like home.",
-            image: "/story_new_2.png",
-            alt: "Our 2nd Visit",
-            imagePosition: "object-center"
         },
         {
             date: "February 14, 2024 🚗",
