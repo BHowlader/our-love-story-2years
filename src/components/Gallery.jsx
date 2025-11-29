@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 
 const Gallery = () => {
     const images = [
+        { src: "/gallery_new_5.jpg", title: "Kashful visit together", desc: "Lost in nature, found in love 🌿", size: "large" },
         { src: "/gallery_new_4.jpg", title: "Romantic Past", desc: "Cherishing every moment of our journey", size: "medium" },
         { src: "/gallery_new_3.jpg", title: "An angel in sharee", desc: "You look absolutely stunning in traditional wear ❤️", size: "large" },
         { src: "/gallery_new_1.jpg", title: "Us ❤️", desc: "A beautiful moment captured together", size: "large" },
