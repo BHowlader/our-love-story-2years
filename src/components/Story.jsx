@@ -39,6 +39,14 @@ const Story = () => {
             imagePosition: "object-center"
         },
         {
+            date: "January 23, 2024 🌿",
+            title: "Uttara Diabari",
+            text: "Our third meeting. A beautiful day out in nature. Every moment spent with you made me fall for you even more.",
+            image: "/story_new_3.png",
+            alt: "Uttara Diabari",
+            imagePosition: "object-center"
+        },
+        {
             date: "January 29, 2024 • 2:53 AM ❤️",
             title: "She Said Yes",
             text: "You said YES! At 2:53 in the morning, you made me the happiest person alive. That single word changed everything. This is when \"us\" officially began. This is when our forever started. And I've been grateful for every single moment since then.",
