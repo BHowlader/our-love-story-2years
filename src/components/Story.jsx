@@ -38,6 +38,14 @@ const Story = () => {
             alt: "She Said Yes"
         },
         {
+            date: "February 2024 🍔",
+            title: "Our 2nd Visit",
+            text: "Meeting you for the second time. The nervousness was gone, replaced by pure joy and excitement. Just being around you felt like home.",
+            image: "/story_new_2.png",
+            alt: "Our 2nd Visit",
+            imagePosition: "object-center"
+        },
+        {
             date: "February 14, 2024 🚗",
             title: "First Drive Together",
             text: "Our first long drive together. The road, the music, and you beside me. It felt like a dream I never wanted to wake up from.",
