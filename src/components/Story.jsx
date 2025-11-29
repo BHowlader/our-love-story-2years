@@ -36,6 +36,13 @@ const Story = () => {
             text: "You said YES! At 2:53 in the morning, you made me the happiest person alive. That single word changed everything. This is when \"us\" officially began. This is when our forever started. And I've been grateful for every single moment since then.",
             image: null,
             alt: "She Said Yes"
+        },
+        {
+            date: "February 14, 2024 🚗",
+            title: "First Drive Together",
+            text: "Our first long drive together. The road, the music, and you beside me. It felt like a dream I never wanted to wake up from.",
+            image: "/story_new_1.jpg",
+            alt: "First Drive Together"
         }
     ];
 
