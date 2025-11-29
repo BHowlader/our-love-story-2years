@@ -2,6 +2,8 @@ import { motion } from 'framer-motion';
 
 const Gallery = () => {
     const images = [
+        { src: "/gallery_new_1.jpg", title: "Us ❤️", desc: "A beautiful moment captured together", size: "large" },
+        { src: "/gallery_new_2.jpg", title: "Lost in your eyes", desc: "Looking at you is my favorite thing to do", size: "medium" },
         { src: "/gallery1.jpg", title: "A very recent close up", desc: "", size: "large" },
         { src: "/gallery2.jpg", title: "Barisal tour together", desc: "", size: "small" },
         { src: "/gallery3.jpg", title: "Silly Moments", desc: "One of those silly photos that makes me laugh every time! 😂", size: "medium" },
