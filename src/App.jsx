@@ -11,6 +11,8 @@ import HeartCursor from './components/HeartCursor';
 import BackgroundParticles from './components/BackgroundParticles';
 import PasswordProtection from './components/PasswordProtection';
 
+import { Analytics } from "@vercel/analytics/react";
+
 function App() {
   const [isUnlocked, setIsUnlocked] = useState(false);
 
@@ -23,7 +25,12 @@ function App() {
   }, []);
 
   if (!isUnlocked) {
-    return <PasswordProtection onUnlock={() => setIsUnlocked(true)} />;
+    return (
+      <>
+        <PasswordProtection onUnlock={() => setIsUnlocked(true)} />
+        <Analytics />
+      </>
+    );
   }
 
   return (
@@ -38,6 +45,7 @@ function App() {
       <LoveNotes />
       <Footer />
       <MusicPlayer />
+      <Analytics />
     </div>
   );
 }
