@@ -36,9 +36,9 @@ const Footer = () => {
                             localStorage.removeItem('site_unlocked');
                             window.location.reload();
                         }}
-                        className="text-[10px] opacity-30 hover:opacity-100 transition-opacity cursor-pointer"
+                        className="text-xs text-white/50 hover:text-white border border-white/20 px-3 py-1 rounded hover:bg-white/10 transition-all cursor-pointer mt-4"
                     >
-                        [ Lock Site ]
+                        🔒 Lock Site
                     </button>
                 </div>
             </div>
