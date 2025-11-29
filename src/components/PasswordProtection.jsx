@@ -8,7 +8,7 @@ const PasswordProtection = ({ onUnlock }) => {
 
     useEffect(() => {
         const calculateTimeLeft = () => {
-            const targetDate = new Date('2026-01-28T23:58:00'); // Updated to 2026 based on Hero.jsx date
+            const targetDate = new Date('2026-01-29T02:53:00'); // Updated to Jan 29, 2:53 AM
             const now = new Date();
             const difference = targetDate - now;
 

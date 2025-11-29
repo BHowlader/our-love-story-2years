@@ -31,14 +31,30 @@ const Footer = () => {
 
                 <div className="mt-16 text-sm text-gray-600 uppercase tracking-widest flex flex-col items-center gap-4">
                     <span
-                        onDoubleClick={() => {
-                            if (confirm('Lock the site again?')) {
-                                localStorage.removeItem('site_unlocked');
-                                window.location.reload();
+                        onClick={(e) => {
+                            // Secret 4-click lock
+                            const now = Date.now();
+                            const clicks = parseInt(e.target.dataset.clicks || '0');
+                            const lastClick = parseInt(e.target.dataset.lastClick || '0');
+
+                            if (now - lastClick > 1000) {
+                                // Reset if too slow
+                                e.target.dataset.clicks = '1';
+                            } else {
+                                e.target.dataset.clicks = (clicks + 1).toString();
+                            }
+
+                            e.target.dataset.lastClick = now.toString();
+
+                            if (parseInt(e.target.dataset.clicks) === 4) {
+                                if (confirm('Lock the site again?')) {
+                                    localStorage.removeItem('site_unlocked');
+                                    window.location.reload();
+                                }
+                                e.target.dataset.clicks = '0';
                             }
                         }}
                         className="cursor-default select-none hover:text-pink-500 transition-colors duration-500"
-                        title="Double click to lock (Secret)"
                     >
                         Made with all my love for you
                     </span>
