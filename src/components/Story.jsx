@@ -42,7 +42,8 @@ const Story = () => {
             title: "First Drive Together",
             text: "Our first long drive together. The road, the music, and you beside me. It felt like a dream I never wanted to wake up from.",
             image: "/story_new_1.jpg",
-            alt: "First Drive Together"
+            alt: "First Drive Together",
+            imagePosition: "object-top"
         }
     ];
 
@@ -118,7 +119,7 @@ const Story = () => {
                                                 alt={story.alt}
                                                 loading="lazy"
                                                 onError={(e) => { e.target.src = `https://via.placeholder.com/800x600/ff0844/ffffff?text=${story.alt}` }}
-                                                className="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-1000"
+                                                className={`w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-1000 ${story.imagePosition || 'object-center'}`}
                                             />
                                         </div>
                                     </div>
