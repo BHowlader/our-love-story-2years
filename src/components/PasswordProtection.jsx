@@ -20,6 +20,7 @@ const PasswordProtection = ({ onUnlock }) => {
                 setTimeLeft(`${days}d ${hours}h ${minutes}m ${seconds}s`);
             } else {
                 setTimeLeft('It\'s Time! ❤️');
+                onUnlock(); // Auto-unlock when time is up
             }
         };
 
