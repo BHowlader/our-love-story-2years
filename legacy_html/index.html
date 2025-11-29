@@ -1,0 +1,1580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Love Story ❤️ 2 Years</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&family=Playfair+Display:ital,wght@0,700;1,900&family=Dancing+Script:wght@700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #ff0844;
+            --secondary: #ffb199;
+            --accent: #ff6b9d;
+            --dark: #1a1a2e;
+            --light: #fff;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #0f0c29;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            color: var(--light);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Animated Background Particles */
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            padding: 40px 20px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(3rem, 10vw, 8rem);
+            background: linear-gradient(45deg, #ff0844, #ffb199, #ff6b9d, #ffa07a);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientFlow 4s ease infinite;
+            margin-bottom: 30px;
+            text-shadow: 0 0 80px rgba(255, 8, 68, 0.5);
+            filter: drop-shadow(0 0 30px rgba(255, 8, 68, 0.6));
+        }
+
+        @keyframes gradientFlow {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 3vw, 2rem);
+            font-weight: 300;
+            margin-bottom: 20px;
+            opacity: 0.9;
+            letter-spacing: 3px;
+        }
+
+        .anniversary-date {
+            font-size: clamp(1rem, 2vw, 1.5rem);
+            background: rgba(255, 8, 68, 0.2);
+            padding: 20px 40px;
+            border-radius: 50px;
+            border: 2px solid rgba(255, 8, 68, 0.5);
+            display: inline-block;
+            margin-top: 30px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(255, 8, 68, 0.3);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-indicator::before {
+            content: '↓';
+            font-size: 2rem;
+            color: var(--accent);
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+
+            40% {
+                transform: translateX(-50%) translateY(-20px);
+            }
+
+            60% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+        }
+
+        /* Countdown Section */
+        .countdown-section {
+            padding: 120px 20px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #ff0844, #ffb199);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.7;
+            margin-bottom: 60px;
+        }
+
+        .countdown-grid {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(200px, 1fr));
+            gap: 30px;
+            max-width: 2000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .countdown-box {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 8, 68, 0.3);
+            border-radius: 20px;
+            padding: 50px 10px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            min-height: 180px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .countdown-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(255, 8, 68, 0.1), rgba(255, 177, 153, 0.1));
+            transform: translateY(100%);
+            transition: transform 0.4s ease;
+        }
+
+        .countdown-box:hover {
+            transform: translateY(-10px) scale(1.05);
+            border-color: var(--primary);
+            box-shadow: 0 20px 60px rgba(255, 8, 68, 0.4);
+        }
+
+        .countdown-box:hover::before {
+            transform: translateY(0);
+        }
+
+        .countdown-number {
+            font-size: clamp(2.5rem, 4vw, 5.5rem);
+            font-weight: 900;
+            color: var(--primary);
+            position: relative;
+            z-index: 1;
+            line-height: 1;
+            display: block;
+            text-align: center;
+            word-break: keep-all;
+            white-space: nowrap;
+            overflow: visible;
+        }
+
+        .countdown-label {
+            font-size: clamp(0.75rem, 1vw, 1.3rem);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.8;
+            margin-top: 15px;
+            position: relative;
+            z-index: 1;
+            font-weight: 600;
+        }
+
+        /* Ultra-wide screens (1920px+) */
+        @media (min-width: 1920px) {
+            .countdown-grid {
+                gap: 40px;
+                grid-template-columns: repeat(5, minmax(250px, 1fr));
+            }
+
+            .countdown-box {
+                padding: 70px 15px;
+                min-height: 220px;
+            }
+        }
+
+        /* Large Desktop (1400px - 1919px) */
+        @media (min-width: 1400px) and (max-width: 1919px) {
+            .countdown-grid {
+                grid-template-columns: repeat(5, minmax(220px, 1fr));
+            }
+
+            .countdown-box {
+                padding: 60px 12px;
+                min-height: 200px;
+            }
+        }
+
+        /* Desktop (1200px - 1399px) */
+        @media (min-width: 1200px) and (max-width: 1399px) {
+            .countdown-box {
+                padding: 50px 15px;
+                min-height: 180px;
+            }
+        }
+
+        /* Tablet landscape (968px - 1199px) */
+        @media (min-width: 968px) and (max-width: 1199px) {
+            .countdown-grid {
+                grid-template-columns: repeat(5, 1fr);
+                gap: 20px;
+            }
+
+            .countdown-box {
+                padding: 40px 12px;
+                min-height: 160px;
+            }
+        }
+
+        /* Tablet portrait (768px - 967px) */
+        @media (min-width: 768px) and (max-width: 967px) {
+            .countdown-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 25px;
+            }
+
+            .countdown-box {
+                padding: 50px 20px;
+                min-height: 170px;
+            }
+        }
+
+        /* Mobile landscape (576px - 767px) */
+        @media (min-width: 576px) and (max-width: 767px) {
+            .countdown-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .countdown-box {
+                padding: 40px 15px;
+                min-height: 150px;
+            }
+        }
+
+        /* Mobile portrait (below 576px) */
+        @media (max-width: 575px) {
+            .countdown-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 15px;
+            }
+
+            .countdown-box {
+                padding: 35px 10px;
+                min-height: 130px;
+            }
+        }
+
+        /* Story Section */
+        .story-section {
+            padding: 120px 20px;
+            position: relative;
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto 100px;
+        }
+
+        .story-content {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            padding: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .story-content::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 8, 68, 0.1) 0%, transparent 70%);
+            animation: rotate 15s linear infinite;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .story-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: var(--primary);
+            position: relative;
+            z-index: 1;
+        }
+
+        .story-content p {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 20px;
+        }
+
+        .story-image {
+            position: relative;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+        }
+
+        .story-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .story-image:hover img {
+            transform: scale(1.1);
+        }
+
+        .story-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(255, 8, 68, 0.3), rgba(255, 177, 153, 0.3));
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .story-image:hover::after {
+            opacity: 1;
+        }
+
+        .story-grid:nth-child(even) {
+            direction: rtl;
+        }
+
+        .story-grid:nth-child(even)>* {
+            direction: ltr;
+        }
+
+        /* Timeline Section */
+        .timeline-section {
+            padding: 120px 20px;
+            position: relative;
+        }
+
+        .timeline {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+        }
+
+        .timeline-item {
+            margin-bottom: 80px;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: auto;
+            margin-right: 0;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-dot {
+            right: auto;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .timeline-content {
+            width: 45%;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 8, 68, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+            position: relative;
+            transition: all 0.4s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 60px rgba(255, 8, 68, 0.4);
+        }
+
+        .timeline-date {
+            font-size: 1rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .timeline-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .timeline-content p {
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            top: 0;
+            right: 50%;
+            transform: translateX(50%);
+            width: 30px;
+            height: 30px;
+            background: var(--primary);
+            border-radius: 50%;
+            border: 5px solid #0f0c29;
+            box-shadow: 0 0 30px var(--primary);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                box-shadow: 0 0 30px var(--primary);
+            }
+
+            50% {
+                box-shadow: 0 0 50px var(--primary), 0 0 80px var(--accent);
+            }
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            padding: 120px 20px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .gallery-card {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .gallery-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(255, 8, 68, 0.7), rgba(255, 177, 153, 0.7));
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            z-index: 1;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 0 25px 70px rgba(255, 8, 68, 0.5);
+        }
+
+        .gallery-card:hover::before {
+            opacity: 1;
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-card:hover img {
+            transform: scale(1.2);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 30px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+            transform: translateY(100%);
+            transition: transform 0.5s ease;
+            z-index: 2;
+        }
+
+        .gallery-card:hover .gallery-caption {
+            transform: translateY(0);
+        }
+
+        .gallery-caption h4 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        .gallery-caption p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        /* Love Notes Section */
+        .love-notes-section {
+            padding: 120px 20px;
+            position: relative;
+        }
+
+        .notes-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .note-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 8, 68, 0.3);
+            border-radius: 25px;
+            padding: 50px 40px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .note-card::before {
+            content: '❝';
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 6rem;
+            color: rgba(255, 8, 68, 0.2);
+            font-family: Georgia, serif;
+        }
+
+        .note-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 60px rgba(255, 8, 68, 0.4);
+        }
+
+        .note-card p {
+            font-size: 1.15rem;
+            line-height: 1.9;
+            position: relative;
+            z-index: 1;
+            font-style: italic;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .footer h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4rem;
+            background: linear-gradient(45deg, #ff0844, #ffb199);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 30px;
+        }
+
+        .footer p {
+            font-size: 1.5rem;
+            opacity: 0.8;
+            max-width: 800px;
+            margin: 0 auto 20px;
+            line-height: 1.8;
+        }
+
+        .footer-hearts {
+            font-size: 3rem;
+            margin-top: 30px;
+            animation: heartbeat 1.5s ease infinite;
+        }
+
+        @keyframes heartbeat {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            25% {
+                transform: scale(1.1);
+            }
+
+            50% {
+                transform: scale(1);
+            }
+
+            75% {
+                transform: scale(1.1);
+            }
+        }
+
+        /* Floating Hearts Animation */
+        .floating-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 2rem;
+            opacity: 0;
+            animation: floatUp 6s ease-in infinite;
+        }
+
+        @keyframes floatUp {
+            0% {
+                opacity: 0;
+                transform: translateY(0) rotate(0deg);
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(-100vh) rotate(360deg);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .story-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .story-grid:nth-child(even) {
+                direction: ltr;
+            }
+
+            .timeline::before {
+                left: 30px;
+            }
+
+            .timeline-content {
+                width: calc(100% - 80px);
+                margin-left: 80px !important;
+                text-align: left !important;
+            }
+
+            .timeline-dot {
+                left: 30px !important;
+                transform: translateX(-50%) !important;
+            }
+
+            .gallery-grid,
+            .notes-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Glowing effect */
+        .glow {
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+
+            0%,
+            100% {
+                text-shadow: 0 0 20px var(--primary), 0 0 40px var(--primary), 0 0 60px var(--primary);
+            }
+
+            50% {
+                text-shadow: 0 0 30px var(--primary), 0 0 60px var(--primary), 0 0 90px var(--primary);
+            }
+        }
+
+        /* Heart Cursor Trail */
+        .cursor-trail {
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            font-size: 20px;
+            animation: fadeOut 1s forwards;
+        }
+
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+
+            100% {
+                opacity: 0;
+                transform: scale(0.5) translateY(-20px);
+            }
+        }
+
+        /* Music Player */
+        .music-player {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 15px;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 8, 68, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .music-player:hover {
+            background: rgba(255, 8, 68, 0.2);
+            transform: scale(1.05);
+        }
+
+        .play-btn {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            border: none;
+            cursor: pointer;
+            animation: pulse 2s infinite;
+        }
+
+        .music-info {
+            color: white;
+            font-size: 0.9rem;
+            display: none;
+        }
+
+        .music-player:hover .music-info {
+            display: block;
+        }
+
+        /* Typing Effect Cursor */
+        .typing-cursor::after {
+            content: '|';
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+        }
+
+        /* Secret Letter Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .modal.show {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-content {
+            background: #fff;
+            width: 90%;
+            max-width: 600px;
+            padding: 40px;
+            border-radius: 10px;
+            position: relative;
+            transform: scale(0.7);
+            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background-image: repeating-linear-gradient(#fff 0px, #fff 24px, #00b0d7 25px);
+            box-shadow: 0 0 50px rgba(255, 255, 255, 0.2);
+        }
+
+        .modal.show .modal-content {
+            transform: scale(1);
+        }
+
+        .letter-paper {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5rem;
+            line-height: 25px;
+            color: #2c3e50;
+        }
+
+        .letter-paper h3 {
+            margin-bottom: 20px;
+            color: var(--primary);
+            font-size: 2.5rem;
+        }
+
+        .letter-paper p {
+            margin-bottom: 25px;
+        }
+
+        .signature {
+            text-align: right;
+            margin-top: 40px;
+            font-size: 2rem;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .close-modal:hover {
+            color: var(--primary);
+        }
+
+        .glow-btn {
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            border: none;
+            border-radius: 50px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(255, 8, 68, 0.4);
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glow-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(255, 8, 68, 0.6);
+        }
+
+        .glow-btn::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 60%);
+            transform: scale(0);
+            transition: transform 0.5s ease;
+        }
+
+        .glow-btn:hover::after {
+            transform: scale(1);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+
+    <!-- Floating Hearts -->
+    <div class="floating-hearts" id="floatingHearts"></div>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="glow">Our Love Story</h1>
+                <p class="hero-subtitle"><span id="typing-text"></span><span class="typing-cursor"></span></p>
+                <div class="anniversary-date">
+                    January 29, 2026 • 2:53 AM 💕
+                </div>
+            </div>
+            <div class="scroll-indicator"></div>
+        </section>
+
+        <!-- Countdown Section -->
+        <section class="countdown-section">
+            <h2 class="section-title">Since You Said Yes...</h2>
+            <p class="section-subtitle">January 29, 2024 at 2:53 AM</p>
+            <div class="countdown-grid">
+                <div class="countdown-box">
+                    <div class="countdown-number" id="years">1</div>
+                    <div class="countdown-label">Years</div>
+                </div>
+                <div class="countdown-box">
+                    <div class="countdown-number" id="days">659</div>
+                    <div class="countdown-label">Days</div>
+                </div>
+                <div class="countdown-box">
+                    <div class="countdown-number" id="hours">15838</div>
+                    <div class="countdown-label">Hours</div>
+                </div>
+                <div class="countdown-box">
+                    <div class="countdown-number" id="minutes">950310</div>
+                    <div class="countdown-label">Minutes</div>
+                </div>
+                <div class="countdown-box">
+                    <div class="countdown-number" id="seconds">0</div>
+                    <div class="countdown-label">Seconds</div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            // Countdown - Inline script to ensure immediate execution
+            (function () {
+                function updateCountdown() {
+                    const startDate = new Date('2024-01-29T02:53:00');
+                    const now = new Date();
+                    const diff = now - startDate;
+
+                    const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365));
+                    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor(diff / (1000 * 60 * 60));
+                    const minutes = Math.floor(diff / (1000 * 60));
+                    const seconds = Math.floor(diff / 1000);
+
+                    const yearsEl = document.getElementById('years');
+                    const daysEl = document.getElementById('days');
+                    const hoursEl = document.getElementById('hours');
+                    const minutesEl = document.getElementById('minutes');
+                    const secondsEl = document.getElementById('seconds');
+
+                    if (yearsEl) yearsEl.textContent = years;
+                    if (daysEl) daysEl.textContent = days.toLocaleString();
+                    if (hoursEl) hoursEl.textContent = hours.toLocaleString();
+                    if (minutesEl) minutesEl.textContent = minutes.toLocaleString();
+                    if (secondsEl) secondsEl.textContent = seconds.toLocaleString();
+
+                    // Dynamic font sizing based on digit count
+                    function adjustFontSize(element, value) {
+                        if (!element) return;
+                        const digitCount = value.toString().replace(/,/g, '').length;
+
+                        if (digitCount <= 1) {
+                            element.style.fontSize = 'clamp(2.5rem, 4.5vw, 5.5rem)';
+                        } else if (digitCount === 2) {
+                            element.style.fontSize = 'clamp(2.3rem, 4.2vw, 5rem)';
+                        } else if (digitCount === 3) {
+                            element.style.fontSize = 'clamp(2.1rem, 4vw, 4.8rem)';
+                        } else if (digitCount === 4) {
+                            element.style.fontSize = 'clamp(1.9rem, 3.8vw, 4.5rem)';
+                        } else if (digitCount === 5) {
+                            element.style.fontSize = 'clamp(1.7rem, 3.5vw, 4.2rem)';
+                        } else if (digitCount === 6) {
+                            element.style.fontSize = 'clamp(1.6rem, 3.2vw, 3.8rem)';
+                        } else if (digitCount === 7) {
+                            element.style.fontSize = 'clamp(1.4rem, 3vw, 3.5rem)';
+                        } else if (digitCount >= 8) {
+                            element.style.fontSize = 'clamp(1.2rem, 2.8vw, 3.2rem)';
+                        }
+                    }
+
+                    adjustFontSize(yearsEl, years);
+                    adjustFontSize(daysEl, days);
+                    adjustFontSize(hoursEl, hours);
+                    adjustFontSize(minutesEl, minutes);
+                    adjustFontSize(secondsEl, seconds);
+                }
+
+                updateCountdown();
+                setInterval(updateCountdown, 1000);
+            })();
+        </script>
+
+        <!-- Story Section -->
+        <section class="story-section">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 80px;">Our Journey</h2>
+
+            <div class="story-grid">
+                <div class="story-content">
+                    <h3>December 9, 2023 💙</h3>
+                    <p>A freshers' party. You in a blue-themed saree. I went there just to pick up my friend, but
+                        destiny had something else planned. You were not that beautiful on that day tbh.</p>
+                    <p>My friend introduced us, and in that moment, I didn't know that my life was about to change
+                        forever. Sometimes the best things happen when we least expect them.</p>
+                </div>
+                <div class="story-image">
+                    <img src="photo1.jpg" alt="The Beginning"
+                        onerror="this.src='https://via.placeholder.com/800x500/ff0844/ffffff?text=Add+Your+Photo+Here'">
+                </div>
+            </div>
+
+            <div class="story-grid">
+                <div class="story-image">
+                    <img src="photo2.jpg" alt="Getting to Know"
+                        onerror="this.src='https://via.placeholder.com/800x500/ff6b9d/ffffff?text=Add+Your+Photo+Here'">
+                </div>
+                <div class="story-content">
+                    <h3>"Cholo, Aksathe Canada Jai" 😂</h3>
+                    <p>I sent you a friend request on Facebook. You didn't accept it right away (classic move!). Then my
+                        friend convinced you, and I asked the silliest question ever.</p>
+                    <p>But you know what? That silly question started something beautiful. Our conversations grew
+                        longer, day by day, night by night. We were chatting all the time, getting to know each other,
+                        and slowly falling for each other.</p>
+                </div>
+            </div>
+
+            <div class="story-grid">
+                <div class="story-content">
+                    <h3>January 21, 2024 💙</h3>
+                    <p>Jamuna Future Park, Domino's. You wore blue again - it was becoming "our color." Both of us were
+                        nervous, hearts racing, palms sweaty, but it felt so right.</p>
+                    <p><b>Those teeth🦷</b></p>
+                    <p>On the way back, I rested on your shoulder and took a quick nap. You let me hold your hand. That
+                        moment... I knew. I just knew you were the one.</p>
+                </div>
+                <div class="story-image">
+                    <img src="photo3.jpg" alt="First Meeting"
+                        onerror="this.src='https://via.placeholder.com/800x500/ffb199/ffffff?text=Add+Your+Photo+Here'">
+                </div>
+            </div>
+
+            <div class="story-grid">
+                <div class="story-image">
+                    <img src="photo4.jpg" alt="The Question"
+                        onerror="this.src='https://via.placeholder.com/800x500/ff9a9e/ffffff?text=Add+Your+Photo+Here'">
+                </div>
+                <div class="story-content">
+                    <h3>January 16, 2024 • 4:10 AM 💍</h3>
+                    <p>I was about to propose. I looked into your eyes... and got completely lost. I was so nervous, my
+                        heart was pounding like crazy.</p>
+                    <p>But I gathered all my courage and asked you to be mine. The scariest and most beautiful moment of
+                        my life.</p>
+                </div>
+            </div>
+
+            <div class="story-grid">
+                <div class="story-content">
+                    <h3>January 29, 2024 • 2:53 AM ❤️</h3>
+                    <p>You said YES! At 2:53 in the morning, you made me the happiest person alive. That single word
+                        changed everything.</p>
+                    <p>This is when "us" officially began. This is when our forever started. And I've been grateful for
+                        every single moment since then.</p>
+                </div>
+                <div class="story-image">
+                    <img src="photo5.jpg" alt="She Said Yes"
+                        onerror="this.src='https://via.placeholder.com/800x500/fecfef/ffffff?text=Add+Your+Photo+Here'">
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section class="timeline-section">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 80px;">Our Timeline</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">December 9, 2023</div>
+                        <h3>The Day We Met 💙</h3>
+                        <p>Your university freshers' party. You in a blue-themed saree. My friend introduced us, and
+                            destiny smiled.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">First Days</div>
+                        <h3>Conversations That Never Ended</h3>
+                        <p>Facebook friend request, silly questions, and endless chats. All day, all night. We couldn't
+                            stop talking.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">January 19, 2024</div>
+                        <h3>Our First Meeting 💙</h3>
+                        <p>Domino's, Jamuna Future Park. Blue dress, nervous hearts, perfect moment. The shoulder nap,
+                            holding hands - everything felt right.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">January 16, 2024 • 4:10 AM</div>
+                        <h3>I Asked The Question 💍</h3>
+                        <p>Lost in your eyes, heart pounding, but I finally asked. The scariest moment that led to the
+                            most beautiful journey.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">January 29, 2024 • 2:53 AM</div>
+                        <h3>You Said YES! 🎉❤️</h3>
+                        <p>The most beautiful word. The moment everything changed. When "us" officially began.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Every Day Since</div>
+                        <h3>Falling More in Love 💕</h3>
+                        <p>Every call, every message, every silly photo, every moment. You love me more than I imagined,
+                            and I'm grateful every single day.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery-section">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 80px;">Our Beautiful Moments</h2>
+            <div class="gallery-grid">
+                <div class="gallery-card">
+                    <img src="gallery1.jpg" alt="Blue Saree"
+                        onerror="this.src='https://via.placeholder.com/800x400/ff0844/ffffff?text=Blue+Saree+Photo'">
+                    <div class="gallery-caption">
+                        <h4>A very recent close up</h4>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <img src="gallery2.jpg" alt="First Meeting"
+                        onerror="this.src='https://via.placeholder.com/800x400/ff6b9d/ffffff?text=First+Meeting+Photo'">
+                    <div class="gallery-caption">
+                        <h4>Barisal tour together</h4>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <img src="gallery3.jpg" alt="Silly Photo"
+                        onerror="this.src='https://via.placeholder.com/800x400/ffb199/ffffff?text=Silly+Photo'">
+                    <div class="gallery-caption">
+                        <h4>Silly Moments</h4>
+                        <p>One of those silly photos that makes me laugh every time! 😂</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <img src="gallery4.jpg" alt="Beautiful You"
+                        onerror="this.src='https://via.placeholder.com/800x400/ff9a9e/ffffff?text=Beautiful+You'">
+                    <div class="gallery-caption">
+                        <h4>Beautiful You</h4>
+                        <p>You being absolutely beautiful - my favorite view 🌟</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <img src="gallery5.jpg" alt="Together"
+                        onerror="this.src='https://via.placeholder.com/800x400/fecfef/ffffff?text=Us+Together'">
+                    <div class="gallery-caption">
+                        <h4>Us Together</h4>
+                        <p>Us being us - talking shit, making memories 😄❤️</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <img src="gallery6.jpg" alt="Our Love"
+                        onerror="this.src='https://via.placeholder.com/800x400/feada6/ffffff?text=Our+Love'">
+                    <div class="gallery-caption">
+                        <h4>Our Love</h4>
+                        <p>Every moment with you is my favorite moment 💑</p>
+                    </div>
+                </div>
+
+                <!-- Additional gallery items can be added here -->
+            </div>
+        </section>
+
+        <!-- Love Notes Section -->
+        <section class="love-notes-section">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 80px;">Things I Love About You</h2>
+            <div class="notes-container">
+                <div class="note-card">
+                    <p>The way you care for me. It's in the little things, the big things, everything. You have this
+                        incredible way of making me feel loved and cherished every single day.</p>
+                </div>
+
+                <div class="note-card">
+                    <p>Every time you call me. I don't care if it's the hundredth call of the day - hearing your voice
+                        never gets old. Each call feels like coming home. But nowadays, work pressure, career tension
+                        has made me screwed, that I don't behave well. I wish everything becomes well like ago.</p>
+                </div>
+
+                <div class="note-card">
+                    <p>How much you love me - way more than I could ever imagine. Sometimes I wonder what I did to
+                        deserve this kind of love, but I'm just grateful it's mine.</p>
+                </div>
+
+                <div class="note-card">
+                    <p>Your silly photos! Yes, sometimes they come out ridiculously silly, and I love every single one
+                        of them. They make me laugh, they make me smile, they're perfectly YOU. 😂</p>
+                </div>
+
+                <div class="note-card">
+                    <p>When you talk shit with me. Those random, silly, sometimes nonsense conversations where we just
+                        be ourselves without any filter - those are my favorite moments.</p>
+                </div>
+
+                <div class="note-card">
+                    <p>Everything. Literally everything about you. From the blue saree to the blue dress. From the
+                        nervous girl to the person who said "yes" at 2:53 AM. I love all of you, always. ❤️</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 60px;">
+                <button id="openLetterBtn" class="glow-btn">💌 Read My Secret Letter</button>
+            </div>
+        </section>
+
+        <!-- Secret Letter Modal -->
+        <div id="letterModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div class="letter-paper">
+                    <h3>My Dearest Love,</h3>
+                    <p>As I write this, I'm thinking about how lucky I am to have you in my life. Two years have passed,
+                        but it feels like just yesterday when I saw you in that blue saree.</p>
+                    <p>You are my best friend, my partner in crime, and my greatest adventure. Through all the ups and
+                        downs, your hand is the only one I want to hold.</p>
+                    <p>I promise to love you through the good times and the bad. I promise to always be there to listen,
+                        to support, and to make you laugh (even with my silly jokes).</p>
+                    <p>Thank you for choosing me. Thank you for loving me.</p>
+                    <p class="signature">Forever Yours,<br>Me ❤️</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <section class="footer">
+            <h2>Happy 2nd Anniversary</h2>
+            <p>Thank you for two incredible years. Every moment with you has been a blessing. You've made me laugh,
+                you've made me feel loved, you've made me the happiest I've ever been.</p>
+            <p>Here's to forever together, my love. To all the adventures still to come, all the silly photos yet to be
+                taken, all the late-night conversations waiting to happen.</p>
+            <p style="margin-top: 40px; font-size: 2rem; font-style: italic;">Forever Yours ❤️</p>
+            <div class="footer-hearts">💕 ❤️ 💖 💗 💝</div>
+        </section>
+
+        <!-- Music Player HTML -->
+        <div class="music-player" id="musicPlayer">
+            <button class="play-btn" id="playBtn">🎵</button>
+            <div class="music-info">
+                <span>Play Our Song</span>
+            </div>
+            <audio id="bgMusic" loop>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+                <!-- Placeholder audio, user should replace with their own -->
+            </audio>
+        </div>
+    </div>
+
+    <!-- Particles.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // Wait for particles.js to load
+        window.addEventListener('load', function () {
+            // Particles configuration
+            if (typeof particlesJS !== 'undefined') {
+                particlesJS('particles-js', {
+                    particles: {
+                        number: { value: 80, density: { enable: true, value_area: 800 } },
+                        color: { value: '#ff0844' },
+                        shape: { type: 'circle' },
+                        opacity: {
+                            value: 0.5,
+                            random: true,
+                            anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false }
+                        },
+                        size: {
+                            value: 3,
+                            random: true,
+                            anim: { enable: true, speed: 2, size_min: 0.1, sync: false }
+                        },
+                        line_linked: {
+                            enable: true,
+                            distance: 150,
+                            color: '#ff6b9d',
+                            opacity: 0.4,
+                            width: 1
+                        },
+                        move: {
+                            enable: true,
+                            speed: 2,
+                            direction: 'none',
+                            random: true,
+                            straight: false,
+                            out_mode: 'out',
+                            bounce: false
+                        }
+                    },
+                    interactivity: {
+                        detect_on: 'canvas',
+                        events: {
+                            onhover: { enable: true, mode: 'repulse' },
+                            onclick: { enable: true, mode: 'push' },
+                            resize: true
+                        }
+                    },
+                    retina_detect: true
+                });
+            } else {
+                console.log('Particles.js not loaded');
+            }
+        });
+
+        // Floating hearts
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.textContent = ['❤️', '💕', '💖', '💗', '💝'][Math.floor(Math.random() * 5)];
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.animationDuration = (Math.random() * 3 + 4) + 's';
+            heart.style.animationDelay = Math.random() * 2 + 's';
+            document.getElementById('floatingHearts').appendChild(heart);
+
+            setTimeout(() => heart.remove(), 7000);
+        }
+
+        setInterval(createHeart, 1000);
+
+        // Smooth scroll reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.story-grid, .timeline-item, .gallery-card, .note-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(50px)';
+            el.style.transition = 'all 0.8s ease';
+            observer.observe(el);
+        });
+
+        // Heart Cursor Trail
+        document.addEventListener('mousemove', function (e) {
+            if (Math.random() < 0.1) { // Only create hearts 10% of the time to avoid lag
+                const heart = document.createElement('div');
+                heart.className = 'cursor-trail';
+                heart.textContent = '❤️';
+                heart.style.left = e.pageX + 'px';
+                heart.style.top = e.pageY + 'px';
+                document.body.appendChild(heart);
+
+                setTimeout(() => {
+                    heart.remove();
+                }, 1000);
+            }
+        });
+
+        // Typing Effect
+        const textElement = document.getElementById('typing-text');
+        const phrases = ["Two Years of Magic", "Two Years of Laughter", "Two Years of Us", "Forever to Go"];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typeSpeed = 100;
+
+        function type() {
+            const currentPhrase = phrases[phraseIndex];
+
+            if (isDeleting) {
+                textElement.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+                typeSpeed = 50;
+            } else {
+                textElement.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+                typeSpeed = 150;
+            }
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                isDeleting = true;
+                typeSpeed = 2000; // Pause at end
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                typeSpeed = 500;
+            }
+
+            setTimeout(type, typeSpeed);
+        }
+
+        // Start typing effect
+        setTimeout(type, 1000);
+
+        // Music Player Logic
+        const musicPlayer = document.getElementById('musicPlayer');
+        const playBtn = document.getElementById('playBtn');
+        const bgMusic = document.getElementById('bgMusic');
+        let isPlaying = false;
+
+        playBtn.addEventListener('click', () => {
+            if (isPlaying) {
+                bgMusic.pause();
+                playBtn.textContent = '🎵';
+                playBtn.style.animation = 'none';
+            } else {
+                bgMusic.play().catch(e => console.log("Audio play failed:", e));
+                playBtn.textContent = '⏸️';
+                playBtn.style.animation = 'pulse 2s infinite';
+            }
+            isPlaying = !isPlaying;
+        });
+
+        // Secret Letter Modal Logic
+        const modal = document.getElementById('letterModal');
+        const btn = document.getElementById('openLetterBtn');
+        const span = document.getElementsByClassName('close-modal')[0];
+
+        if (btn) {
+            btn.onclick = function () {
+                modal.classList.add('show');
+            }
+        }
+
+        if (span) {
+            span.onclick = function () {
+                modal.classList.remove('show');
+            }
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.classList.remove('show');
+            }
+        }
+    </script>
+</body>
+
+</html>
