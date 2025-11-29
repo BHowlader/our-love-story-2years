@@ -29,8 +29,17 @@ const Footer = () => {
                     <span>💕</span><span>❤️</span><span>💖</span><span>💗</span><span>💝</span>
                 </motion.div>
 
-                <div className="mt-16 text-sm text-gray-600 uppercase tracking-widest">
-                    Made with all my love for you
+                <div className="mt-16 text-sm text-gray-600 uppercase tracking-widest flex flex-col items-center gap-4">
+                    <span>Made with all my love for you</span>
+                    <button
+                        onClick={() => {
+                            localStorage.removeItem('site_unlocked');
+                            window.location.reload();
+                        }}
+                        className="text-[10px] opacity-30 hover:opacity-100 transition-opacity cursor-pointer"
+                    >
+                        [ Lock Site ]
+                    </button>
                 </div>
             </div>
         </footer>
