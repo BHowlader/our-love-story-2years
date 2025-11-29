@@ -30,16 +30,18 @@ const Footer = () => {
                 </motion.div>
 
                 <div className="mt-16 text-sm text-gray-600 uppercase tracking-widest flex flex-col items-center gap-4">
-                    <span>Made with all my love for you</span>
-                    <button
-                        onClick={() => {
-                            localStorage.removeItem('site_unlocked');
-                            window.location.reload();
+                    <span
+                        onDoubleClick={() => {
+                            if (confirm('Lock the site again?')) {
+                                localStorage.removeItem('site_unlocked');
+                                window.location.reload();
+                            }
                         }}
-                        className="text-xs text-white/50 hover:text-white border border-white/20 px-3 py-1 rounded hover:bg-white/10 transition-all cursor-pointer mt-4"
+                        className="cursor-default select-none hover:text-pink-500 transition-colors duration-500"
+                        title="Double click to lock (Secret)"
                     >
-                        🔒 Lock Site
-                    </button>
+                        Made with all my love for you
+                    </span>
                 </div>
             </div>
         </footer>
