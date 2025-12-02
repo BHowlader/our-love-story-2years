@@ -5,6 +5,7 @@ const PasswordProtection = ({ onUnlock }) => {
     const [password, setPassword] = useState('');
     const [error, setError] = useState(false);
     const [timeLeft, setTimeLeft] = useState('');
+    const [isTimeUp, setIsTimeUp] = useState(false);
 
     useEffect(() => {
         const calculateTimeLeft = () => {
@@ -18,9 +19,10 @@ const PasswordProtection = ({ onUnlock }) => {
                 const minutes = Math.floor((difference / 1000 / 60) % 60);
                 const seconds = Math.floor((difference / 1000) % 60);
                 setTimeLeft(`${days}d ${hours}h ${minutes}m ${seconds}s`);
+                setIsTimeUp(false);
             } else {
                 setTimeLeft('It\'s Time! ❤️');
-                onUnlock(); // Auto-unlock when time is up
+                setIsTimeUp(true);
             }
         };
 
@@ -55,23 +57,26 @@ const PasswordProtection = ({ onUnlock }) => {
                 className="glass-panel p-8 md:p-12 rounded-3xl max-w-md w-full text-center relative z-10 border border-white/10"
             >
                 <div className="text-6xl mb-6">🔒</div>
-                <h2 className="font-playfair text-3xl md:text-4xl text-white mb-4">Coming Soon</h2>
+                <h2 className="font-playfair text-3xl md:text-4xl text-white mb-4">
+                    {isTimeUp ? "One Last Step" : "Coming Soon"}
+                </h2>
 
                 <div className="font-outfit text-pink-400 text-xl md:text-2xl font-light tracking-widest mb-8 font-mono">
                     {timeLeft}
                 </div>
 
                 <p className="text-gray-400 mb-8 font-light">
-                    This page is currently locked. <br />
-                    Please enter the password to view.
+                    {isTimeUp
+                        ? "What is the word that keeps us together?"
+                        : <>This page is currently locked. <br />Please enter the password to view.</>}
                 </p>
 
                 <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                     <input
-                        type="password"
+                        type={isTimeUp ? "text" : "password"}
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
-                        placeholder="Enter Password"
+                        placeholder={isTimeUp ? "Your Answer" : "Enter Password"}
                         className={`w-full bg-white/5 border ${error ? 'border-red-500' : 'border-white/10'} rounded-xl px-6 py-4 text-white text-center focus:outline-none focus:border-pink-500 transition-colors placeholder-gray-600`}
                         autoFocus
                     />
