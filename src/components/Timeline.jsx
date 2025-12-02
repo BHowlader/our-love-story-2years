@@ -13,8 +13,8 @@ const Timeline = () => {
     const events = [
         { date: "Dec 9, 2023", title: "The Day We Met 💙", desc: "Your university freshers' party. You in a blue-themed saree. My friend introduced us, and destiny smiled." },
         { date: "First Days", title: "Endless Chats", desc: "Facebook friend request, silly questions, and endless chats. All day, all night. We couldn't stop talking." },
-        { date: "Jan 19, 2024", title: "First Meeting 💙", desc: "Domino's, Jamuna Future Park. Blue dress, nervous hearts, perfect moment. The shoulder nap, holding hands - everything felt right." },
         { date: "Jan 16, 2024", title: "The Question 💍", desc: "Lost in your eyes, heart pounding, but I finally asked. The scariest moment that led to the most beautiful journey." },
+        { date: "Jan 21, 2024", title: "First Meeting 💙", desc: "Domino's, Jamuna Future Park. Blue dress, nervous hearts, perfect moment. The shoulder nap, holding hands - everything felt right." },
         { date: "Jan 29, 2024", title: "She Said YES! 🎉", desc: "The most beautiful word. The moment everything changed. When \"us\" officially began." },
         { date: "Today", title: "Still Falling 💕", desc: "Every call, every message, every silly photo. You love me more than I imagined, and I'm grateful every single day." }
     ];
