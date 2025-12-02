@@ -67,7 +67,7 @@ const PasswordProtection = ({ onUnlock }) => {
 
                 <p className="text-gray-400 mb-8 font-light">
                     {isTimeUp
-                        ? "What is the word that keeps us together?"
+                        ? "How long you wanna stay with me?"
                         : <>This page is currently locked. <br />Please enter the password to view.</>}
                 </p>
 
