@@ -1,40 +1,12 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const PasswordProtection = ({ onUnlock }) => {
     const [password, setPassword] = useState('');
     const [error, setError] = useState(false);
-    const [timeLeft, setTimeLeft] = useState('');
-    const [isTimeUp, setIsTimeUp] = useState(false);
-
-    useEffect(() => {
-        const calculateTimeLeft = () => {
-            const targetDate = new Date('2026-01-29T02:53:00'); // Updated to Jan 29, 2:53 AM
-            const now = new Date();
-            const difference = targetDate - now;
-
-            if (difference > 0) {
-                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
-                const minutes = Math.floor((difference / 1000 / 60) % 60);
-                const seconds = Math.floor((difference / 1000) % 60);
-                setTimeLeft(`${days}d ${hours}h ${minutes}m ${seconds}s`);
-                setIsTimeUp(false);
-            } else {
-                setTimeLeft('It\'s Time! ❤️');
-                setIsTimeUp(true);
-            }
-        };
-
-        const timer = setInterval(calculateTimeLeft, 1000);
-        calculateTimeLeft();
-
-        return () => clearInterval(timer);
-    }, []);
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Simple password check - you can change "forever" to any password you want
         if (password === '2.568') {
             onUnlock();
             localStorage.setItem('site_unlocked', 'true');
@@ -58,25 +30,19 @@ const PasswordProtection = ({ onUnlock }) => {
             >
                 <div className="text-6xl mb-6">🔒</div>
                 <h2 className="font-playfair text-3xl md:text-4xl text-white mb-4">
-                    {isTimeUp ? "One Last Step" : "Coming Soon"}
+                    One Last Step
                 </h2>
 
-                <div className="font-outfit text-pink-400 text-xl md:text-2xl font-light tracking-widest mb-8 font-mono">
-                    {timeLeft}
-                </div>
-
                 <p className="text-gray-400 mb-8 font-light">
-                    {isTimeUp
-                        ? "What was your result on Spring 2025?"
-                        : <>This page is currently locked. <br />Please enter the password to view.</>}
+                    What was your result on Spring 2025?
                 </p>
 
                 <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                     <input
-                        type={isTimeUp ? "text" : "password"}
+                        type="text"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
-                        placeholder={isTimeUp ? "Your Answer" : "Enter Password"}
+                        placeholder="Your Answer"
                         className={`w-full bg-white/5 border ${error ? 'border-red-500' : 'border-white/10'} rounded-xl px-6 py-4 text-white text-center focus:outline-none focus:border-pink-500 transition-colors placeholder-gray-600`}
                         autoFocus
                     />
