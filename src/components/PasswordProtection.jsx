@@ -34,7 +34,7 @@ const PasswordProtection = ({ onUnlock }) => {
                 </h2>
 
                 <p className="text-gray-400 mb-8 font-light">
-                    What was your result on Spring 2025?
+                    What was your GPA on Spring 2025?
                 </p>
 
                 <form onSubmit={handleSubmit} className="flex flex-col gap-4">
