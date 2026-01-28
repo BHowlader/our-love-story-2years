@@ -35,7 +35,7 @@ const PasswordProtection = ({ onUnlock }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         // Simple password check - you can change "forever" to any password you want
-        if (password.toLowerCase() === 'forever' || password === '290126') {
+        if (password === '2.568') {
             onUnlock();
             localStorage.setItem('site_unlocked', 'true');
         } else {
@@ -67,7 +67,7 @@ const PasswordProtection = ({ onUnlock }) => {
 
                 <p className="text-gray-400 mb-8 font-light">
                     {isTimeUp
-                        ? "How long you wanna stay with me?"
+                        ? "What was your result on Spring 2025?"
                         : <>This page is currently locked. <br />Please enter the password to view.</>}
                 </p>
 
