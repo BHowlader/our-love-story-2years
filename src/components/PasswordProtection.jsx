@@ -30,7 +30,7 @@ const PasswordProtection = ({ onUnlock }) => {
             >
                 <div className="text-6xl mb-6">🔒</div>
                 <h2 className="font-playfair text-3xl md:text-4xl text-white mb-4">
-                    One Last Step
+                    Just to Embarrasse!
                 </h2>
 
                 <p className="text-gray-400 mb-8 font-light">
